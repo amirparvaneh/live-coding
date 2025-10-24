@@ -6,10 +6,8 @@ public class Task {
     long id;
     Date startDate;
 
-
     public Task() {
     }
-
 
     public Task(long id, Date startDate) {
         this.id = id;

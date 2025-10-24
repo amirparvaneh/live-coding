@@ -1,6 +1,5 @@
 package amp2;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,12 +21,8 @@ public class TaskMain {
         Task task6 = new Task(3, date5);
 
         List<Task> tasks = List.of(task1,task2,task3,task4,task5,task6);
-
         TaskUtil taskUtil = new TaskUtil();
-
-
         Task mostFrequent = taskUtil.findMostFrequent(tasks);
-
         System.out.println(mostFrequent.getId());
      }
 }
