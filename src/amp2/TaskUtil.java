@@ -10,13 +10,10 @@ public class TaskUtil {
         Map<Task, Long> map = new HashMap<>();
         long counterId = 0;
 
-
         for (Task task : tasks) {
-
-            if (!map.containsKey(task) && ) {
+            if (!map.containsKey(task) && !map.containsValue(1l)) {
                 map.put(task, Long.valueOf(1));
             } else {
-                counterId = map.get(task);
                 counterId++;
                 map.put(task,counterId);
             }
