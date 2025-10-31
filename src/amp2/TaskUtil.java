@@ -6,18 +6,17 @@ public class TaskUtil {
 
     Task findMostFrequent(Collection<Task> tasks) {
 
+        Map<Long, Long> map = new HashMap<>();
         Task mostFrequentTask = new Task();
-        Map<Task, Long> map = new HashMap<>();
-        long counterId = 0;
 
         for (Task task : tasks) {
+            long counterId = 1;
             if (!map.containsKey(task) && !map.containsValue(1l)) {
-                map.put(task, Long.valueOf(1));
+                map.put(task.getId(), Long.valueOf(1));
             } else {
                 counterId++;
-                map.put(task,counterId);
+                map.put(task.getId(),counterId);
             }
-
         }
 
         return mostFrequentTask;
